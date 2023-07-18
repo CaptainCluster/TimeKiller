@@ -33,7 +33,9 @@ function forEachLoopProcess(selectionTabHolder, pair){
     //We use a li-tag to display the entire selection, one line per activity
     //a-tags will provide user the hyperlink that they can click to move.
     const linkHolder = document.createElement("li");
+    linkHolder.className = "activityLi";
     const selectableActivityElement = document.createElement("a");
+    selectableActivityElement.className = "activityLink";
 
     selectableActivityElement.href =  value;
     selectableActivityElement.textContent = key + "\n"; 
