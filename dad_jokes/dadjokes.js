@@ -45,7 +45,6 @@ async function fetchData(){
     return dadJoke;
 }
 
-
 function displayData(data){
     const dadJokeHolderElement = document.getElementById("dadJoke");
     dadJokeHolderElement.textContent = data;
