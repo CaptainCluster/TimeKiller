@@ -13,6 +13,7 @@ function generateDefaultComponents(){
         {"Activity Recommendator" : "../activity_recommendator/activityrecommendator.html"},
         {"Cat Facts" : "../cat_facts/catfacts.html"},
         {"Chuck Norris Jokes" : "../chuck_norris_jokes/chucknorrisjokes.html"},
+        {"Dad Jokes" : "../dad_jokes/dadjokes.html"},
         {"Dog Image Fetcher" : "../dog_image_generator/dogimagefetcher.html"},
         {"Joke Generator" : "../joke_generator/jokegenerator.html"}
     ]
