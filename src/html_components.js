@@ -9,13 +9,13 @@ function generateDefaultComponents(){
     //This allows us to keep things simple, when it comes to the 
     //upcoming forEach-loop.
     const activityNamesList = [
-        {"Main Page" : "../index.html"},
-        {"Activity Recommendator" : "../activity_recommendator/activityrecommendator.html"},
-        {"Cat Facts" : "../cat_facts/catfacts.html"},
-        {"Chuck Norris Jokes" : "../chuck_norris_jokes/chucknorrisjokes.html"},
-        {"Dad Jokes" : "../dad_jokes/dadjokes.html"},
-        {"Dog Image Fetcher" : "../dog_image_generator/dogimagefetcher.html"},
-        {"Joke Generator" : "../joke_generator/jokegenerator.html"}
+        {"Main Page" : "/src/index.html"},
+        {"Activity Recommendator" : "/src/activity_recommendator/activityrecommendator.html"},
+        {"Cat Facts" : "/src/cat_facts/catfacts.html"},
+        {"Chuck Norris Jokes" : "/src/chuck_norris_jokes/chucknorrisjokes.html"},
+        {"Dad Jokes" : "/src/dad_jokes/dadjokes.html"},
+        {"Dog Image Fetcher" : "/src/dog_image_generator/dogimagefetcher.html"},
+        {"Joke Generator" : "/src/joke_generator/jokegenerator.html"}
     ]
     loadSelectionTab(activityNamesList);
 }
