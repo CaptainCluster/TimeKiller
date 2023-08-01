@@ -2,7 +2,7 @@
 @author CaptainCluster
 https://github.com/CaptainCluster
 */
-import { generateDefaultComponents } from "../html_components.js";
+import { generateDefaultComponents } from "/src/html_components.js";
 
 if(document.readyState !== "loading") {
     mainFunction();
@@ -11,34 +11,34 @@ if(document.readyState !== "loading") {
     mainFunction();
     });
 }
+
 function mainFunction(){
     generateDefaultComponents();
-    const factButton = document.getElementById("factButton");
-    factButton.addEventListener("click", function(){
-        factButtonEvent();
+    const suggestButton = document.getElementById("suggestButton");
+    suggestButton.addEventListener("click", function(){
+        suggestionButtonEvent();
     });
 }
 
-async function factButtonEvent(){
+async function suggestionButtonEvent(){
     const rawData = await fetchData();
     const processedData = await processData(rawData);
     displayData(processedData);
 }
 
 async function fetchData(){
-    const url = "https://catfact.ninja/fact";
+    const url = "https://www.boredapi.com/api/activity";
     const res = await fetch(url);
     const rawData = await res.json();
     return rawData;
 }
 
 async function processData(rawData){
-    const processedData = rawData.fact;
-    console.log(processedData)
+    const processedData = rawData.activity;
     return processedData;
 }
 
 function displayData(processedData){
-    const activitySuggestionElement = document.getElementById("catFact");
+    const activitySuggestionElement = document.getElementById("activitySuggestion");
     activitySuggestionElement.textContent = processedData;
 }

@@ -2,7 +2,7 @@
 @author CaptainCluster
 https://github.com/CaptainCluster
 */
-import { generateDefaultComponents } from "../html_components.js";
+import { generateDefaultComponents } from "/src/html_components.js";
 
 if(document.readyState !== "loading") {
     mainFunction();
@@ -14,31 +14,31 @@ if(document.readyState !== "loading") {
 
 function mainFunction(){
     generateDefaultComponents();
-    const suggestButton = document.getElementById("suggestButton");
-    suggestButton.addEventListener("click", function(){
-        suggestionButtonEvent();
+    const jokeButton = document.getElementById("jokeButton");
+    jokeButton.addEventListener("click", function(){
+        jokeButtonProcess();
     });
 }
 
-async function suggestionButtonEvent(){
+async function jokeButtonProcess(){
     const rawData = await fetchData();
     const processedData = await processData(rawData);
     displayData(processedData);
 }
 
 async function fetchData(){
-    const url = "https://www.boredapi.com/api/activity";
+    const url = "https://api.chucknorris.io/jokes/random";
     const res = await fetch(url);
     const rawData = await res.json();
     return rawData;
 }
 
-async function processData(rawData){
-    const processedData = rawData.activity;
+function processData(rawData){
+    const processedData = rawData.value;
     return processedData;
 }
 
 function displayData(processedData){
-    const activitySuggestionElement = document.getElementById("activitySuggestion");
-    activitySuggestionElement.textContent = processedData;
+    const chuckNorrisJokeElement = document.getElementById("chuckNorrisJoke");
+    chuckNorrisJokeElement.textContent = processedData;
 }

@@ -2,7 +2,7 @@
 @author CaptainCluster
 https://github.com/CaptainCluster
 */
-import { generateDefaultComponents } from "../html_components.js";
+import { generateDefaultComponents } from "/src/html_components.js";
 //This program uses multiple different free APIs. If you are interested
 //in them, check this link out: https://apipheny.io/free-api/
 

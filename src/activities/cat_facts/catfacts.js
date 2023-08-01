@@ -2,7 +2,7 @@
 @author CaptainCluster
 https://github.com/CaptainCluster
 */
-import { generateDefaultComponents } from "../html_components.js";
+import { generateDefaultComponents } from "/src/html_components.js";
 
 if(document.readyState !== "loading") {
     mainFunction();
@@ -11,34 +11,34 @@ if(document.readyState !== "loading") {
     mainFunction();
     });
 }
-
 function mainFunction(){
     generateDefaultComponents();
-    const jokeButton = document.getElementById("jokeButton");
-    jokeButton.addEventListener("click", function(){
-        jokeButtonProcess();
+    const factButton = document.getElementById("factButton");
+    factButton.addEventListener("click", function(){
+        factButtonEvent();
     });
 }
 
-async function jokeButtonProcess(){
+async function factButtonEvent(){
     const rawData = await fetchData();
     const processedData = await processData(rawData);
     displayData(processedData);
 }
 
 async function fetchData(){
-    const url = "https://api.chucknorris.io/jokes/random";
+    const url = "https://catfact.ninja/fact";
     const res = await fetch(url);
     const rawData = await res.json();
     return rawData;
 }
 
-function processData(rawData){
-    const processedData = rawData.value;
+async function processData(rawData){
+    const processedData = rawData.fact;
+    console.log(processedData)
     return processedData;
 }
 
 function displayData(processedData){
-    const chuckNorrisJokeElement = document.getElementById("chuckNorrisJoke");
-    chuckNorrisJokeElement.textContent = processedData;
+    const activitySuggestionElement = document.getElementById("catFact");
+    activitySuggestionElement.textContent = processedData;
 }

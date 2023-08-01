@@ -10,12 +10,12 @@ function generateDefaultComponents(){
     //upcoming forEach-loop.
     const activityNamesList = [
         {"Main Page" : "/src/index.html"},
-        {"Activity Recommendator" : "/src/activity_recommendator/activityrecommendator.html"},
-        {"Cat Facts" : "/src/cat_facts/catfacts.html"},
-        {"Chuck Norris Jokes" : "/src/chuck_norris_jokes/chucknorrisjokes.html"},
-        {"Dad Jokes" : "/src/dad_jokes/dadjokes.html"},
-        {"Dog Image Fetcher" : "/src/dog_image_generator/dogimagefetcher.html"},
-        {"Joke Generator" : "/src/joke_generator/jokegenerator.html"}
+        {"Activity Recommendator" : "/src/activities/activity_recommendator/activityrecommendator.html"},
+        {"Cat Facts" : "/src/activities/cat_facts/catfacts.html"},
+        {"Chuck Norris Jokes" : "/src/activities/chuck_norris_jokes/chucknorrisjokes.html"},
+        {"Dad Jokes" : "/src/activities/dad_jokes/dadjokes.html"},
+        {"Dog Image Fetcher" : "/src/activities/dog_image_generator/dogimagefetcher.html"},
+        {"Joke Generator" : "/src/activities/joke_generator/jokegenerator.html"}
     ]
     loadSelectionTab(activityNamesList);
 }
